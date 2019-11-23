@@ -3,13 +3,13 @@
 #' Density, distribution function, quantile function and random generation for
 #'    the Nakagami distribution with parameters `shape` and `scale`.
 #'
-#' The Nakagami distribution with parameters `shape = m` and `scale = Omega` has
+#' The Nakagami distribution with shape \eqn{m} and scale \eqn{\Omega} has
 #'    density \deqn{2m^m/{\Gamma(m)\Omega^m} x^(2m-1)e^(-m/\Omega x^2)} for
-#'    \eqn{x \geq 0}, \eqn{m \geq 1/2} and \eqn{Omega > 0}.
+#'    \eqn{x \ge 0}, \eqn{m \ge 1/2} and \eqn{\Omega > 0}.
 #'
-#' If \eqn{Y} is [Gamma][stats::GammaDist] distributed with `shape = m` and
-#'    `rate = m/Omega` then \eqn{X = \sqrt Y} is Nakagami distributed
-#'    with `shape = m` and `scale = Omega`.
+#' If \eqn{Y} is [Gamma][stats::GammaDist] distributed with \eqn{shape = m} and
+#'    \eqn{rate = m/\Omega} then \eqn{X = \sqrt Y} is Nakagami distributed
+#'    with \eqn{shape = m} and \eqn{scale = \Omega}.
 #'
 #' @export
 #' @name Nakagami
@@ -35,6 +35,9 @@
 #'    Intensity of Rapid Fading." In Statistical Methods in Radio Wave
 #'    Propagation: Proceedings of a Symposium Held at the University of
 #'    California, edited by William C. Hoffman, 3-36. Permagon Press.
+#'
+#' @seealso The [Gamma][stats::GammaDist] distribution is closed related to the
+#'    Nakgami distribution.
 
 dnaka <- function(x, shape, scale, log = FALSE) {
   assertthat::assert_that(is_logical_scalar(log))
