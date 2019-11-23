@@ -1,0 +1,24 @@
+Package: nakagami
+Type: Package
+Title: Nakagami Distribution
+Version: 1.0.0
+Author: Jonas Moss
+Authors@R: c(
+    person("Jonas", "Moss", , "jonas.gjertsen@gmail.com", role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0002-6876-6964")
+    ))
+Description: Density, distribution, quantile and random generation function for 
+   the Nakagami distribution.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: assertthat
+Suggests: 
+    testthat,
+    knitr,
+    covr,
+    rmarkdown
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
+URL: https://github.com/JonasMoss/nakagami
+BugReports: https://github.com/JonasMoss/nakagami/issues
