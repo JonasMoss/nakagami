@@ -86,5 +86,5 @@ This project follows a [Contributor Code of Conduct](https://www.contributor-cov
 
 * Nakagami, N. 1960. “The m-Distribution, a General Formula of Intensity of Rapid Fading.” In Statistical Methods in Radio Wave Propagation: Proceedings of a Symposium Held at the University of California, June 18–20, 1958, edited by William C. Hoffman, 3–36. Permagon Press. https://doi.org/10.1016/B978-0-08-009306-2.50005-4.
 
-* Yee TW (2010). “The VGAM Package for Categorical Data Analysis.” Journal of Statistical Software, 32(10), 1–34. http://www.jstatsoft.org/v32/i10/.
+* Yee TW (2010). “The VGAM Package for Categorical Data Analysis.” Journal of Statistical Software, 32(10), 1–34. https://www.jstatsoft.org/v32/i10/.
 

@@ -61,11 +61,11 @@ microbenchmark::microbenchmark(nakagami::rnaka(100, 2, 4),
                                VGAM::rnaka(100, 4, 2))
 #> Unit: microseconds
 #>                        expr    min      lq      mean  median      uq
-#>  nakagami::rnaka(100, 2, 4)  268.8  320.60   505.731  360.15  441.90
-#>      VGAM::rnaka(100, 4, 2) 2002.0 2612.55 10624.073 2829.50 3666.05
-#>       max neval
-#>   10153.3   100
-#>  722787.2   100
+#>  nakagami::rnaka(100, 2, 4)  267.0  298.10   596.232  339.25  398.95
+#>      VGAM::rnaka(100, 4, 2) 1942.8 2319.95 17219.140 2580.60 2980.30
+#>        max neval
+#>    16680.8   100
+#>  1451304.4   100
 ```
 
 And the quantile function of `nakagami` is slightly faster.
@@ -75,9 +75,9 @@ p = 1:10/11
 microbenchmark::microbenchmark(nakagami::qnaka(0.01, 10, 4), 
                                VGAM::qnaka(0.01, 4, 10))
 #> Unit: microseconds
-#>                          expr   min     lq    mean median     uq    max
-#>  nakagami::qnaka(0.01, 10, 4) 146.0 156.65 249.531 176.95 226.40 1568.9
-#>      VGAM::qnaka(0.01, 4, 10) 342.5 360.65 515.369 379.95 491.75 2549.7
+#>                          expr   min     lq    mean median    uq    max
+#>  nakagami::qnaka(0.01, 10, 4) 147.2 177.45 211.647 186.30 207.9 1883.9
+#>      VGAM::qnaka(0.01, 4, 10) 340.5 371.20 456.141 435.05 470.3 2512.6
 #>  neval
 #>    100
 #>    100
@@ -105,4 +105,4 @@ Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
 
   - Yee TW (2010). “The VGAM Package for Categorical Data Analysis.”
     Journal of Statistical Software, 32(10), 1–34.
-    <http://www.jstatsoft.org/v32/i10/>.
+    <https://www.jstatsoft.org/v32/i10/>.
