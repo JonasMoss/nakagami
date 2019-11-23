@@ -54,9 +54,11 @@ test_that("dnaka: Recycling works", {
 
 test_that("dnaka: log must be scalar", {
   expect_error(dnaka(x, shape = shape, scale = scale, log = c(TRUE, FALSE)),
-               regexp = "log is not a logical scalar")
+    regexp = "log is not a logical scalar"
+  )
   expect_error(dnaka(x, shape = shape, scale = scale, log = "TRUE"),
-               regexp = "log is not a logical scalar")
+    regexp = "log is not a logical scalar"
+  )
   expect_silent(dnaka(x, shape = shape, scale = scale, log = TRUE))
 })
 
@@ -100,18 +102,24 @@ test_that("pnaka: Recycling works", {
 
 test_that("pnaka: log.p must be scalar", {
   expect_error(pnaka(q, shape = shape, scale = scale, log.p = c(TRUE, FALSE)),
-               regexp = "log.p is not a logical scalar")
+    regexp = "log.p is not a logical scalar"
+  )
   expect_error(pnaka(q, shape = shape, scale = scale, log.p = "TRUE"),
-               regexp = "log.p is not a logical scalar")
+    regexp = "log.p is not a logical scalar"
+  )
   expect_silent(pnaka(q, shape = shape, scale = scale, log.p = TRUE))
 })
 
 test_that("pnaka: lower.tails must be scalar", {
-  expect_error(pnaka(q, shape = shape, scale = scale,
-                     lower.tail = c(TRUE, FALSE)),
-               regexp = "lower.tail is not a logical scalar")
+  expect_error(pnaka(q,
+    shape = shape, scale = scale,
+    lower.tail = c(TRUE, FALSE)
+  ),
+  regexp = "lower.tail is not a logical scalar"
+  )
   expect_error(pnaka(q, shape = shape, scale = scale, lower.tail = "TRUE"),
-               regexp = "lower.tail is not a logical scalar")
+    regexp = "lower.tail is not a logical scalar"
+  )
   expect_silent(pnaka(q, shape = shape, scale = scale, lower.tail = TRUE))
 })
 
@@ -155,18 +163,24 @@ test_that("qnaka: Recycling works", {
 
 test_that("qnaka: log.p must be scalar", {
   expect_error(qnaka(p, shape = shape, scale = scale, log.p = c(TRUE, FALSE)),
-               regexp = "log.p is not a logical scalar")
+    regexp = "log.p is not a logical scalar"
+  )
   expect_error(qnaka(p, shape = shape, scale = scale, log.p = "TRUE"),
-               regexp = "log.p is not a logical scalar")
+    regexp = "log.p is not a logical scalar"
+  )
   expect_silent(qnaka(log(p), shape = shape, scale = scale, log.p = TRUE))
 })
 
 test_that("qnaka: lower.tails must be scalar", {
-  expect_error(qnaka(p, shape = shape, scale = scale,
-                     lower.tail = c(TRUE, FALSE)),
-               regexp = "lower.tail is not a logical scalar")
+  expect_error(qnaka(p,
+    shape = shape, scale = scale,
+    lower.tail = c(TRUE, FALSE)
+  ),
+  regexp = "lower.tail is not a logical scalar"
+  )
   expect_error(qnaka(p, shape = shape, scale = scale, lower.tail = "TRUE"),
-               regexp = "lower.tail is not a logical scalar")
+    regexp = "lower.tail is not a logical scalar"
+  )
   expect_silent(qnaka(p, shape = shape, scale = scale, lower.tail = TRUE))
 })
 
