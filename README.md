@@ -9,9 +9,10 @@ Status](https://travis-ci.com/JonasMoss/nakagami.svg?branch=master)](https://tra
 Status](https://ci.appveyor.com/api/projects/status/github/JonasMoss/nakagami?branch=master&svg=true)](https://ci.appveyor.com/project/JonasMoss/nakagami)
 [![Coverage
 Status](https://codecov.io/gh/JonasMoss/nakagami/branch/master/graph/badge.svg)](https://codecov.io/gh/JonasMoss/nakagami?branch=master)
-[![Project Status: WIP – Initial development is in progress, but there
-has not yet been a stable, usable release suitable for the
-public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Active – The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nakagami)](https://cran.r-project.org/package=nakagami)
 
 ## Overview
 
@@ -46,7 +47,8 @@ lines(x, nakagami::dnaka(x, shape = 4, scale = 2), type = "l", lwd = 2)
 
 All of these functions are implemented in the `R` package
 [`VGAM`](https://cran.r-project.org/package=VGAM). The implementations
-in this package are notable faster and more thoroughly tested.
+in this package are notably faster, are more thoroughly tested, and use
+a more standardized set of arguments.
 
 The `rnaka` of `nakagami` is much faster
 
@@ -56,12 +58,12 @@ The `rnaka` of `nakagami` is much faster
 microbenchmark::microbenchmark(nakagami::rnaka(100, 2, 4), 
                                VGAM::rnaka(100, 4, 2))
 #> Unit: microseconds
-#>                        expr    min      lq      mean  median      uq
-#>  nakagami::rnaka(100, 2, 4)  266.3  333.85   730.367  417.90  536.55
-#>      VGAM::rnaka(100, 4, 2) 2025.5 2684.20 13104.551 3337.55 4195.75
+#>                        expr    min      lq     mean  median      uq
+#>  nakagami::rnaka(100, 2, 4)  269.7  300.60  446.118  349.00  409.25
+#>      VGAM::rnaka(100, 4, 2) 1908.9 2333.75 9298.948 2620.75 3054.20
 #>       max neval
-#>   14712.5   100
-#>  952284.0   100
+#>    8145.2   100
+#>  654743.6   100
 ```
 
 And the quantile function is slightly faster.
@@ -71,9 +73,9 @@ p = 1:10/11
 microbenchmark::microbenchmark(nakagami::qnaka(0.01, 10, 4), 
                                VGAM::qnaka(0.01, 4, 10))
 #> Unit: microseconds
-#>                          expr   min    lq    mean median     uq    max
-#>  nakagami::qnaka(0.01, 10, 4) 143.0 173.2 250.898 204.80 269.55 1506.1
-#>      VGAM::qnaka(0.01, 4, 10) 351.7 393.4 679.773 486.05 688.70 4608.2
+#>                          expr   min     lq    mean median    uq     max
+#>  nakagami::qnaka(0.01, 10, 4) 149.0 179.00 533.340 192.10 215.9 32216.9
+#>      VGAM::qnaka(0.01, 4, 10) 339.2 366.85 464.678 441.75 475.6  1902.3
 #>  neval
 #>    100
 #>    100
@@ -98,3 +100,7 @@ Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
     California, June 18–20, 1958, edited by William C. Hoffman, 3–36.
     Permagon Press.
     <https://doi.org/10.1016/B978-0-08-009306-2.50005-4>.
+
+  - Yee TW (2010). “The VGAM Package for Categorical Data Analysis.”
+    Journal of Statistical Software, 32(10), 1–34.
+    <http://www.jstatsoft.org/v32/i10/>.
