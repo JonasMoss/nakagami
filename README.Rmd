@@ -44,6 +44,7 @@ the quantile function is `qnaka` and random deviate generator is `rnaka`. Use
 them just like the `*gamma` functions in the `stats` package.
 
 ```{r}
+set.seed(313)
 x = seq(0, 3, by = 0.01)
 hist(nakagami::rnaka(10^5, shape = 4, scale = 2), freq = FALSE, breaks = "FD")
 lines(x, nakagami::dnaka(x, shape = 4, scale = 2), type = "l", lwd = 2)
@@ -52,11 +53,11 @@ lines(x, nakagami::dnaka(x, shape = 4, scale = 2), type = "l", lwd = 2)
 
 ## Note
 
-All of these functions are implemented in the `R` package [`VGAM`](https://cran.r-project.org/package=VGAM). The implementations in this
-package are notably faster, are more thoroughly tested, and use a more 
-standardized set of arguments.
+All of these functions are implemented in the `R` package [`VGAM`](https://cran.r-project.org/package=VGAM). As of `VGAM` version 1.1-2, 
+the implementations in `nakagami` are faster, more thoroughly tested, and use 
+a standardized set of arguments following the template of `dgamma` et cetera.
 
-The `rnaka` of `nakagami` is much faster
+The `rnaka` of `nakagami` is much faster than the `rnaka` of `VGAM`:
 ```{r rnaka}
 #install.packages("VGAM")
 
@@ -66,7 +67,7 @@ microbenchmark::microbenchmark(nakagami::rnaka(100, 2, 4),
 
 ```
 
-And the quantile function is slightly faster.
+And the quantile function of `nakagami` is slightly faster.
 ```{r qnaka}
 p = 1:10/11
 microbenchmark::microbenchmark(nakagami::qnaka(0.01, 10, 4), 
