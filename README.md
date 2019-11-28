@@ -60,12 +60,12 @@ The `rnaka` of `nakagami` is much faster than the `rnaka` of `VGAM`:
 microbenchmark::microbenchmark(nakagami::rnaka(100, 2, 4), 
                                VGAM::rnaka(100, 4, 2))
 #> Unit: microseconds
-#>                        expr    min      lq      mean  median      uq
-#>  nakagami::rnaka(100, 2, 4)  267.0  298.10   596.232  339.25  398.95
-#>      VGAM::rnaka(100, 4, 2) 1942.8 2319.95 17219.140 2580.60 2980.30
+#>                        expr    min      lq      mean median      uq
+#>  nakagami::rnaka(100, 2, 4)  265.9  303.45   553.702  352.6  430.25
+#>      VGAM::rnaka(100, 4, 2) 2028.3 2355.35 17558.350 2670.4 3040.85
 #>        max neval
-#>    16680.8   100
-#>  1451304.4   100
+#>    15697.2   100
+#>  1480179.6   100
 ```
 
 And the quantile function of `nakagami` is slightly faster.
@@ -75,9 +75,9 @@ p = 1:10/11
 microbenchmark::microbenchmark(nakagami::qnaka(0.01, 10, 4), 
                                VGAM::qnaka(0.01, 4, 10))
 #> Unit: microseconds
-#>                          expr   min     lq    mean median    uq    max
-#>  nakagami::qnaka(0.01, 10, 4) 147.2 177.45 211.647 186.30 207.9 1883.9
-#>      VGAM::qnaka(0.01, 4, 10) 340.5 371.20 456.141 435.05 470.3 2512.6
+#>                          expr   min     lq     mean median     uq      max
+#>  nakagami::qnaka(0.01, 10, 4) 143.6 170.10 2117.254 201.65 293.25 183790.6
+#>      VGAM::qnaka(0.01, 4, 10) 345.9 389.55  565.839 464.65 585.10   2706.5
 #>  neval
 #>    100
 #>    100

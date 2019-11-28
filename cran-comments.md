@@ -1,3 +1,8 @@
+## Resubmission
+
+* Added  (Nakagami, 1960) <doi:10.1016/B978-0-08-009306-2.50005-4> to the
+  description.
+
 ## Test environments
 * local Windows 10, R version 3.6.1
 * Windows 10 (on AppVeyor), R version 3.6.1
