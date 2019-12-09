@@ -12,7 +12,7 @@ is_naka_parameters <- function(shape, scale) {
 }
 
 attr(is_naka_parameters, "fail") <- function(call, env) {
-  paste0("'shape and scale are not valid parameter vectors")
+  paste0("shape and scale are not valid parameter vectors")
 }
 
 is_positive_integer <- function(x) {
