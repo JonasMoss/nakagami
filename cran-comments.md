@@ -1,13 +1,12 @@
-## Resubmission
+## New version
 
-* Added  (Nakagami, 1960) <doi:10.1016/B978-0-08-009306-2.50005-4> to the
-  description.
+* Fixed incorrect parameter bounds for `m` from `m>=1/2` to `m>0`.
 
 ## Test environments
-* local Windows 10, R version 3.6.1
-* Windows 10 (on AppVeyor), R version 3.6.1
-* Ubuntu 16.04 (on Travis-CI), R version 3.6.1, R-oldrel, R-devel.
-* macOS 10.13 (on Travis-CI), R version 3.6.1
+* local Windows 10, R current
+* Windows 10 (on AppVeyor), R current
+* Ubuntu (on Travis-CI), R current R-oldrel, R-devel.
+* macOS (on Travis-CI), R current
 
 ## R CMD check results
 There were no ERRORs, NOTEs, or WARNINGs. 
