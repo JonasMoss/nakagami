@@ -15,9 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 # nakagami <img src="man/figures/logo.png" align="right" width="100" height="53.4" />
-[![Build Status](https://travis-ci.com/JonasMoss/nakagami.svg?branch=master)](https://travis-ci.com/JonasMoss/nakagami)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/JonasMoss/nakagami?branch=master&svg=true)](https://ci.appveyor.com/project/JonasMoss/nakagami)
-[![Coverage Status](https://codecov.io/gh/JonasMoss/nakagami/branch/master/graph/badge.svg)](https://codecov.io/gh/JonasMoss/nakagami?branch=master)
+[![R build status](https://github.com/JonasMoss/nakagami/workflows/R-CMD-check/badge.svg)](https://github.com/JonasMoss/nakagami/actions)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nakagami)](https://cran.r-project.org/package=nakagami)
 
