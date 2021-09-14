@@ -2,10 +2,10 @@ is_naka_parameters <- function(shape, scale) {
   if (!is.numeric(shape) | !is.numeric(scale)) {
     return(FALSE)
   }
-  if (any(shape < 1 / 2)) {
+  if (any(shape <= 0)) {
     return(FALSE)
   }
-  if (any(scale < 0)) {
+  if (any(scale <= 0)) {
     return(FALSE)
   }
   TRUE
