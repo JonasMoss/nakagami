@@ -25,3 +25,4 @@ cache$
 ^pkgdown$
 ^LICENSE\.md$
 ^\.github$
+^dev$

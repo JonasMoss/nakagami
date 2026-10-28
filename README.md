@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# nakagami <img src="man/figures/logo.png" align="right" width="100" height="53.4" />
+# nakagami <img src="man/figures/logo.png" align="right" width="120" />
 
 [![R build
 status](https://github.com/JonasMoss/nakagami/workflows/R-CMD-check/badge.svg)](https://github.com/JonasMoss/nakagami/actions)
